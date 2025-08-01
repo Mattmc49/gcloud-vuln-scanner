@@ -1,4 +1,4 @@
-# gcloud-vuln-scanner (DRAFT)
+# gcloud-vuln-scanner 
 
 A lightweight, extensible Python tool to discover common misconfigurations in your Google Cloud Platform (GCP) projects. Run it interactively in Cloud Shell or automate it via GitHub Actions to get continuous visibility into firewall rules, public buckets, IAM issues, and more.
 
@@ -39,32 +39,30 @@ A lightweight, extensible Python tool to discover common misconfigurations in yo
 ## ⚙️ Installation
 
 1. **Clone the repo**  
-   ```bash
-   git clone https://github.com/<your-org>/gcloud-vuln-scanner.git
-   cd gcloud-vuln-scanner
-2. Create & activate a virtual environment
-   ```bash 
-  python3 -m venv .venv
-  source .venv/bin/activate
-3. Install dependencies
-  pip install --upgrade pip
-  pip install -r requirements.txt
+> git clone https://github.com/<your-org>/gcloud-vuln-scanner.git
+> cd gcloud-vuln-scanner
+2. **Create & activate a virtual environment**
+> python3 -m venv .venv
+>  source .venv/bin/activate
+3. **Install dependencies**
+> pip install --upgrade pip
+> pip install -r requirements.txt
 
-🔑 Authentication:
-Interactive / Cloud Shell
+## 🔑 Authentication:
+Launch the Interactive Cloud Shell:
 
-gcloud auth login
-gcloud config set project YOUR_GCP_PROJECT_ID
+> gcloud auth login
+> gcloud config set project YOUR_GCP_PROJECT_ID
 
---project: your GCP project ID
+--project: (your GCP project ID)
 --output: path to write the JSON report (default: report.json)
 
 1. Create a JSON key for a service account with the required roles.
 2. Add the JSON as a GitHub secret named GCP_SA_KEY.
 3. (Workflow will decode and activate it.)
 
-🏃 Usage:
-bash
+## 🏃 Usage: 
+```bash 
 Copy
 Edit
 python3 -m scanner.scanner \
@@ -73,7 +71,7 @@ python3 -m scanner.scanner \
 --project: your GCP project ID
 --output: path to write the JSON report (default: report.json)
 
-Sample Output
+**Sample Output:** 
 text
 Copy
 Edit
