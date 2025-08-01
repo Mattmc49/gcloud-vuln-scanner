@@ -1,7 +1,3 @@
-
----
-
-```markdown
 <!-- File: GCP-Service-Accounts.md -->
 
 # GCP Disabled Service Accounts
