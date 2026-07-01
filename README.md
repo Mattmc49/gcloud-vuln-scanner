@@ -4,7 +4,7 @@ A lightweight, extensible Python tool to discover common misconfigurations in yo
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Firewall auditing**  
   Detects rules allowing 0.0.0.0/0 (all-open ingress/egress).
@@ -36,7 +36,7 @@ A lightweight, extensible Python tool to discover common misconfigurations in yo
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 1. **Clone the repo**  
 > git clone https://github.com/<your-org>/gcloud-vuln-scanner.git
@@ -48,7 +48,7 @@ A lightweight, extensible Python tool to discover common misconfigurations in yo
 > pip install --upgrade pip
 > pip install -r requirements.txt
 
-## 🔑 Authentication:
+## Authentication:
 Launch the Interactive Cloud Shell:
 
 > gcloud auth login
@@ -61,7 +61,7 @@ Launch the Interactive Cloud Shell:
 2. Add the JSON as a GitHub secret named GCP_SA_KEY.
 3. (Workflow will decode and activate it.)
 
-## 🏃 Usage: 
+## Usage: 
 ```bash 
 Copy
 Edit
