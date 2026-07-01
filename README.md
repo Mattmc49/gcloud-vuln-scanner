@@ -23,7 +23,7 @@ A lightweight, extensible Python tool to discover common misconfigurations in yo
 
 ---
 
-## 🔧 Prerequisites
+## Prerequisites
 
 - **Google Cloud SDK** (pre-installed in Cloud Shell)  
 - **Python 3.9+**  
