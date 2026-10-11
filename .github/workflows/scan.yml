@@ -32,7 +32,7 @@ jobs:
 
       - name: Run scanner
         run: |
-          python3 -m scanner.scanner \
+          python3 -m scanner.gcp_vuln_scanner \
             --project="${{ secrets.GCP_PROJECT_ID }}" \
             --output="report-${{ github.run_id }}.json"
 

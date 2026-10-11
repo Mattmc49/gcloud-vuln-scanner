@@ -13,7 +13,7 @@ A lightweight, extensible Python tool to discover common misconfigurations in yo
   Lists buckets with `allUsers` or `allAuthenticatedUsers` ACLs.
 
 - **Service account checks**  
-  Flags disabled or overly-privileged service accounts.
+  Flags disabled service accounts.
 
 - **JSON & human-readable output**  
   Write detailed `report.json` and view summary tables on the console.
@@ -61,20 +61,19 @@ Launch the Interactive Cloud Shell:
 2. Add the JSON as a GitHub secret named GCP_SA_KEY.
 3. (Workflow will decode and activate it.)
 
-## Usage: 
-```bash 
-Copy
-Edit
-python3 -m scanner.scanner \
+## Usage
+
+```bash
+python3 -m scanner.gcp_vuln_scanner \
   --project YOUR_GCP_PROJECT_ID \
   --output report.json
+```
+
 --project: your GCP project ID
 --output: path to write the JSON report (default: report.json)
 
-**Sample Output:** 
-text
-Copy
-Edit
+**Sample Output:**
+```text
 === firewalls (2) ===
 NAME           DIRECTION    ALLOWS
 default-allow HTTP:80,443    INGRESS
@@ -88,3 +87,4 @@ public-assets     READER
 None found.
 
 Report written to report.json
+```

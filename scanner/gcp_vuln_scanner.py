@@ -3,7 +3,7 @@ import argparse
 import json
 import sys
 
-from google.cloud import compute_v1, storage, iam_v1
+from google.cloud import compute_v1, storage, iam_admin_v1
 from tabulate import tabulate
 
 def list_firewalls(project):
@@ -33,7 +33,7 @@ def list_public_buckets(project):
     return misconfigs
 
 def list_disabled_service_accounts(project):
-    client = iam_v1.IAMClient()
+    client = iam_admin_v1.IAMClient()
     parent = f"projects/{project}"
     misconfigs = []
     for sa in client.list_service_accounts(request={'name': parent}).accounts:
